@@ -231,6 +231,8 @@ class Line(object):
         self.start = start.clone()
         self.end = end.clone()
         self.total = 0
+        self.beg = start.clone()
+        self.beg1 = end.clone()
 
 
     def __repr__(self):
@@ -711,7 +713,8 @@ class Line(object):
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
 
-        return self
+        self.start = self.beg
+        self.end = self.beg1
 
 
 
